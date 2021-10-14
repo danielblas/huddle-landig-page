@@ -1,0 +1,47 @@
+@use '../util/' as *;
+
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Poppins', sans-serif;
+
+.text {
+    color: white;
+    text-align: center;
+
+    @include breakpoint('medium'){
+        text-align: left;
+    }
+
+    h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: rem(26);
+        line-height: rem(36);
+        font-weight: 600;
+        @include breakpoint('medium'){
+            font-size: rem(42);
+            line-height: rem(60);
+        }
+    }   
+    
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: rem(16);
+        line-height: rem(24);
+        font-weight: 400;
+        @include breakpoint('medium'){
+            font-size: rem(18);
+            line-height: rem(27);
+        }
+
+    }
+
+    a, a:active, a:visited, a:link {
+        color: $violet;
+        font-family: 'Poppins', sans-serif;
+        font-size: rem(13);
+        font-weight: 400;
+        text-decoration: none;
+        @include breakpoint('medium'){
+            font-size: rem(17);
+        }
+    }
+}

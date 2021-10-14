@@ -1,0 +1,54 @@
+@use '../util/' as *;
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: rem(70);
+
+    @include breakpoint('medium'){
+        flex-direction: row;
+        gap: rem(60);
+    }
+    .image {
+        flex: 1.4;
+        
+        img {
+            width: 100%;
+        }
+    }
+
+    .text {
+        flex: 1;
+
+        h1 {
+            margin-bottom: rem(25);
+            @include breakpoint('medium'){
+                margin-top: rem(50);
+                margin-bottom: rem(35);
+            }
+        }
+
+        p {
+            margin-bottom: rem(25);
+            @include breakpoint('medium'){
+                margin-bottom: rem(30);
+            }
+        }
+
+        a {
+            background-color: white;
+            border-radius: rem(20);
+            padding: rem(10) rem(70);
+            box-shadow: 0 rem(10) rem(10) rgba(0, 0, 0, 0.25);
+            @include breakpoint('medium'){
+                border-radius: rem(25);
+                padding: rem(10) rem(65);
+            }
+        }
+
+        a:hover {
+            background-color: $soft-magenta;
+            color: white;
+        }
+    }
+}

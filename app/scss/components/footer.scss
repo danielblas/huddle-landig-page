@@ -1,0 +1,46 @@
+@use '../util/' as *;
+
+footer {
+    position: absolute;
+    bottom: rem(40);
+    
+
+    .logos {
+        display: flex;
+        gap: rem(8);
+        color: white;
+        @include breakpoint('medium'){
+            gap: rem(16);
+        }
+
+        &__logo {
+            width: rem(30);
+            height: rem(30);
+            font-size: rem(18);
+            display: block;
+            text-align: center;
+            border: rem(1) solid;
+            border-radius: 50%;
+            padding: rem(5);
+
+            @include breakpoint('medium'){
+                width: rem(40);
+                height: rem(40);
+                font-size: rem(20);
+                padding: rem(9);
+            }
+        }
+
+        &__logo:hover {
+            color: $soft-magenta;
+        }
+    }
+    
+    @include breakpoint('medium'){
+        right: rem(80);
+    }
+    @include breakpoint-down('small'){
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

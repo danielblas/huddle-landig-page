@@ -1,0 +1,20 @@
+@use '../util/' as *;
+
+header {
+    padding-top: rem(35);
+    margin-bottom: rem(60);
+    justify-content: left;
+
+    @include breakpoint('medium'){
+        padding-top: rem(60);
+        margin-bottom: rem(100);
+    }
+
+    img {
+        width: rem(122);
+
+        @include breakpoint('medium'){
+            width: rem(210);
+        }
+    }
+}

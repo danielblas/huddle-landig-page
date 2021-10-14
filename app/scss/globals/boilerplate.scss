@@ -22,3 +22,26 @@ h1, h2, h3, p {
   margin: 0;
   padding: 0;
 }
+
+
+
+body {
+  //Background
+  background-color: $violet;
+  background-image: url(/images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  //Margins
+  margin: 0 rem(37);
+  
+  @include breakpoint('medium'){
+    //Background
+    background-image: url(/images/bg-desktop.svg);
+    background-size: auto 100%;
+
+    //Margins
+    margin: 0 rem(74);
+  }
+}
+
